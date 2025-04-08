@@ -1,0 +1,42 @@
+#panelIzquierdaLogin{
+    height: 100%;
+    width: 50%;
+    background-color: 8361ff;
+    display:inline-block;
+    position: relative;
+}
+#panelDerechaLogin{
+    height: 100%;
+    display:inline-block;
+    position: absolute;
+    text-align: center;
+}
+#tituloLogin{
+    position: relative;
+    text-align: center;
+    top:25%;
+    font-weight: bold;
+    font-size: 80px;
+}
+#textoLogin{
+    position: relative;
+    text-align: center;
+    top:30%;
+    font-size: 20px;
+    color: white;
+}
+#formularioContenedor{
+    position: relative;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    left: 250px;
+    top: 30%;
+}
+#formularioLogin{
+    border-bottom-style: solid;
+    padding-bottom: 20px;
+}
+#botonLogin{
+    margin-top: 20px;
+}
