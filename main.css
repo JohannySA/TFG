@@ -11,21 +11,21 @@
     position: absolute;
     text-align: center;
 }
-#tituloLogin{
+#titulo{
     position: relative;
     text-align: center;
     top:25%;
     font-weight: bold;
     font-size: 80px;
 }
-#textoLogin{
+#texto{
     position: relative;
     text-align: center;
     top:30%;
     font-size: 20px;
     color: white;
 }
-#formularioContenedor{
+#formularioContenedorLogin{
     position: relative;
     text-align: center;
     align-content: center;
@@ -39,4 +39,35 @@
 }
 #botonLogin{
     margin-top: 20px;
+}
+
+/*------------------*/
+
+#panelDerechaSignUp{
+    height: 100%;
+    width: 50%;
+    background-color: 8361ff;
+    position: relative;
+    float: right;
+}
+#panelIzquierdaSignUp{
+    height: 100%;
+    width: 50%;
+    display:inline-block;
+    position: absolute;
+    text-align: center;
+}
+#formularioContenedorSignUp{
+    position: relative;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    left: 250px;
+    top: 20%;
+}
+
+/*------------------*/
+
+#ejemplo{
+    height: 100%;
 }
