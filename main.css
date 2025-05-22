@@ -71,3 +71,35 @@
 #ejemplo{
     height: 100%;
 }
+
+/*------------------*/
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+table {
+    border-collapse: collapse;
+    width: 45%;
+    display:inline-block;
+}
+th, td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: left;
+}
+#tableTitle {
+    background-color: #c7c2c28a;
+    border: 1px solid #999;
+    font-weight: bold;
+}
+#tableComponents {
+    background-color: #f2f2f2;
+}
+#tableComponentsAlt {
+    background-color: rgba(214, 214, 214, 0.59);
+}
