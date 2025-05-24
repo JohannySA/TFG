@@ -49,9 +49,12 @@ function calcularAc(){
 }
 
 function totalAncAc(){
+
     resultado = calcularAnc()+calcularAc();
 
     document.getElementById('TotalAncAc').innerText = resultado;
+
+    return resultado;
 }
 
 setInterval(calcularAnc, 100);
@@ -135,9 +138,124 @@ function totalPNetoPcPnc(){
 
     document.getElementById('TotalPNPNCPC').innerText = resultado;
 
+    return resultado;
+
 }
 
 setInterval(calcularPNeto, 100);
 setInterval(calcularPasivoNC, 100);
 setInterval(calcularPasivoC, 100);
 setInterval(totalPNetoPcPnc, 100);
+
+
+function porcentajes(){
+
+    if(totalAncAc() !== totalPNetoPcPnc()){
+
+        alert("El contéo del balance no es correcto");
+
+    }else{
+
+    //Anc
+
+    let porcentajeAnc =((calcularAnc() * 100) / totalAncAc()).toFixed(2);
+    document.getElementById('porcentajeAnc').innerText = porcentajeAnc+"%";
+
+    //Ac
+
+    let porcentajeAc =((calcularAc() * 100) / totalAncAc()).toFixed(2);
+    document.getElementById('porcentajeAc').innerText = porcentajeAc+"%";
+
+    //Pneto
+
+    let porcentajePneto =((calcularPNeto() * 100) / totalPNetoPcPnc()).toFixed(2);
+    document.getElementById('porcentajePneto').innerText = porcentajePneto+"%";
+
+    //Pnc
+
+    let porcentajePnc =((calcularPasivoNC() * 100) / totalPNetoPcPnc()).toFixed(2);
+    document.getElementById('porcentajePnc').innerText = porcentajePnc+"%";
+
+    //Pc
+
+    let porcentajePc =((calcularPasivoC() * 100) / totalPNetoPcPnc()).toFixed(2);
+    document.getElementById('porcentajePc').innerText = porcentajePc+"%";
+
+    }
+
+    porcentajeFinanciacionExterna();
+    fondoManiobra();
+
+    function porcentajeFinanciacionExterna(){
+
+    let num1 = calcularPasivoC()+calcularPasivoNC();
+
+    let porcentajeFinanciado = ((num1*100) / totalPNetoPcPnc()).toFixed(2);
+
+    document.getElementById('pFinanc').innerText = porcentajeFinanciado+"% del capital de la empresa corresponde a la financiación externa";
+
+    }
+
+    function fondoManiobra(){
+
+    let maniobra = calcularAc() - calcularPasivoC();
+    let situacion;
+
+    if(maniobra >= 0){
+        situacion = "Optima"
+    }else if(maniobra == 0){
+        situacion = "Mala"
+    }else{
+        situacion = "Critica";
+    }
+
+    document.getElementById('FondoManiobra').innerText = "Tu fondo de maniobra es de "+maniobra+"€: Tu situacion es "+situacion;
+
+    }
+
+    //RATIOS DE LA EMPRESA
+
+    endeudamiento();
+    solvencia(),
+    liquidez();
+    tesoreria();
+
+    function endeudamiento(){
+
+        let num1 = calcularPasivoC()+calcularPasivoNC();
+
+        let endeudamiento = (num1 / calcularPNeto()).toFixed(2);
+
+        document.getElementById('endeudamiento').innerText = "Ratio de endeudamiento de "+endeudamiento;
+
+    }
+    function solvencia(){
+
+        let num1 = calcularPasivoC()+calcularPasivoNC();
+
+        let solvencia = (totalAncAc() / num1).toFixed(2);
+
+        document.getElementById('solvencia').innerText = "Ratio de solvencia de "+solvencia;
+
+    }
+    function liquidez(){
+
+        let liquidez = (calcularAc() / calcularPasivoC()).toFixed(2);
+
+        document.getElementById('liquidez').innerText = "Ratio de liquidez de "+liquidez;
+
+    }
+    function tesoreria(){
+
+        let num1 = parseFloat(document.getElementById('DatoIzq2.1.1').value);
+        let num2 = parseFloat(document.getElementById('DatoIzq2.1.2').value);
+
+        let num3 = calcularAc()-(num1+num2);
+
+        let tesoreria = (num3 / calcularPasivoC()).toFixed(2);
+
+        document.getElementById('tesoreria').innerText = "Ratio de tesoreria de "+tesoreria;
+
+    }
+
+}

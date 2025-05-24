@@ -42,6 +42,8 @@
             </div>
         </header>
 
+        <p>Visite la página oficial de <a href="https://www.comunidad.madrid/sites/default/files/gobierno_abierto/cuadro_cuentas_pc_esfl.pdf" target="_blank">CUADRO DE CUENTAS DEL PGC</a> para ayuda con el balance</p>
+
         <div>  
           <!-- LEFT TABLE: 22 rows, 2 columns -->
           <table>
@@ -148,6 +150,49 @@
         </table>
     </div>
 
+    <br>
+    <button onclick="porcentajes()" value="SacarPorcentajes">Sacar Porcentajes</button>
+    <br>
+
+    <div>
+      <p>PORCENTAJES DEL BALANCE</p><br><br>
+
+      <p>ACTIVO NO CORRIENTE<div id="porcentajeAnc"></div></p>
+      <p>ACTIVO CORRIENTE<div id="porcentajeAc"></div></p><br><br>
+
+      <p>PATRIMONIO NETO<div id="porcentajePneto"></div></p>
+      <p>PASIVO NO CORRIENTE<div id="porcentajePnc"></div></p>
+      <p>PASIVO CORRIENTE<div id="porcentajePc"></div></p>
+    </div>
+
+    <br><br>
+
+    <div>
+      <p>PORCENTAJE FINANCIADO EXTERNAMENTE</p><br>
+
+      <p id="pFinanc"></p>
+    </div>
+
+    <br><br>
+    
+    <div>
+      <p>FONDO DE MANIOBRA</p><br>
+
+      <p id="FondoManiobra"></p>
+    </div>
+
+    <br><br>
+
+    <div>
+
+      <p>RATIOS DE LA EMRPESA</p><br>
+
+      <p id="endeudamiento">Endeudamiento</p>
+      <p id="solvencia">Solvencia</p>
+      <p id="liquidez">Liquidez</p>
+      <p id="tesoreria">Tesoreria</p>
+
+    </div>
 
     <script src="sheetCalculations.js"></script>
 
