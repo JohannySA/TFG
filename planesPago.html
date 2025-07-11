@@ -1,0 +1,108 @@
+<html>
+
+    <head>
+
+        <title>Calculadora de Balances Integrada a la Empresa</title>
+        <link rel="stylesheet" href="planesPago.css">
+        <meta charset="UTF-8">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <script>
+
+            function login(){
+                window.location.href = "login.html"
+            }
+            function signup(){
+                window.location.href = "signup.html"
+            }
+
+            
+        </script>
+        
+    </head>
+
+    <body>
+
+        <!--  HEADER PRINCIPAL  -->
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <a href="main.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="main.html" class="nav-link px-2 link-dark">Home</a></li>
+                <li><a href="caracteristicas.html" class="nav-link px-2 link-dark">Características</a></li>
+                <li><a href="planesPago.html" class="nav-link px-2 link-secondary">Planes de pago</a></li>
+                <li><a href="FAQs.html" class="nav-link px-2 link-dark">FAQs</a></li>
+                <li><a href="sobreNosotros.html" class="nav-link px-2 link-dark">Sobre nosotros</a></li>
+            </ul>
+            <div class="col-md-3 text-end">
+                <button type="button" id="login" class="btn btn-outline-primary me-2" onclick="login()">Inicia Sesión</button>
+                <button type="button" id="iniciar" class="btn btn-primary me-2" onclick="signup()">Regístrate</button>
+            </div>
+        </header>
+
+        <div class="container">
+        <h1 class="pricing-header">Planes de pago para CBI</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">
+                        Plan Sencillo
+                    </div>
+                    <div class="card-body">
+                        <h2 class="price">4.99€/mo</h2>
+                        <ul class="list-unstyled mt-3">
+                            <li>Acceso al historial</li>
+                            <li>Soporte personalizado</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="" class="btn btn-primary">Choose Plan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">
+                        Plan Profesional
+                    </div>
+                    <div class="card-body">
+                        <h2 class="price">9.99€/mo</h2>
+                        <ul class="list-unstyled mt-3">
+                            <li>UTodo lo ya comentado</li>
+                            <li>Acceso a un contable por parte de la aplicación</li>
+                            <li>Recomendaciones personalizadas</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="" class="btn btn-primary">Choose Plan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">
+                        Plan Ejecutivo
+                    </div>
+                    <div class="card-body">
+                        <h2 class="price">29.99€/mo</h2>
+                        <ul class="list-unstyled mt-3">
+                            <li>Todo lo ya comentado</li>
+                            <li>Plantilla perosnalizada para tu empresa</li>
+                            <li>Actualizaciones disponibles 24/7</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="" class="btn btn-primary">Choose Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>

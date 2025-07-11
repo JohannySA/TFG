@@ -31,10 +31,10 @@
             </a>
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="main.html" class="nav-link px-2 link-secondary">Home</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark">Características</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark">Planes de pago</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark">Sobre nosotros</a></li>
+                <li><a href="caracteristicas.html" class="nav-link px-2 link-dark">Características</a></li>
+                <li><a href="planesPago.html" class="nav-link px-2 link-dark">Planes de pago</a></li>
+                <li><a href="FAQs.html" class="nav-link px-2 link-dark">FAQs</a></li>
+                <li><a href="sobreNosotros.html" class="nav-link px-2 link-dark">Sobre nosotros</a></li>
             </ul>
             <div class="col-md-3 text-end">
                 <button type="button" id="login" class="btn btn-outline-primary me-2" onclick="login()">Inicia Sesión</button>
@@ -44,264 +44,184 @@
 
         <p>Visite la página oficial de <a href="https://www.comunidad.madrid/sites/default/files/gobierno_abierto/cuadro_cuentas_pc_esfl.pdf" target="_blank">CUADRO DE CUENTAS DEL PGC</a> para ayuda con el balance</p>
 
-        <div>  
-          <!-- LEFT TABLE: 22 rows, 2 columns -->
-          <table>
-            <tr>
-                <th id="tableTitle">Activo NC) ACTIVO NO CORRIENTE</th>
-                <th id="tableTitle"><p id="ActivoNC">0</p></th>
-            </tr>
-            <tr><td id="tableComponents">I. Inmovilizado intangible</td> <td id="tableComponents"><input type="number" id="DatoIzq1.1" value="0"></td></tr>
+        <div class="tables-container">
+            <!-- Left Table: Activo -->
+            <table>
+                <tr>
+                    <th id="tableTitle">Activo NC) ACTIVO NO CORRIENTE</th>
+                    <th id="tableTitle"><p id="ActivoNC">0</p></th>
+                </tr>
+                <tr><td id="tableComponents">I. Inmovilizado intangible</td><td id="tableComponents"><input type="number" id="DatoIzq1.1" value="0"></td></tr>
+                <tr><td id="tableComponents">II. Inmovilizado material</td><td id="tableComponents"><p id="DatoIzq1.2"></p></td></tr>
+                <tr><td>Terrenos y construcciones</td><td><input type="number" id="DatoIzq1.2.1" value="0"></td></tr>
+                <tr><td>Instalaciones técnicas y otro inmovilizado material</td><td><input type="number" id="DatoIzq1.2.2" value="0"></td></tr>
+                <tr><td id="tableComponents">III. Inversiones inmobiliarias</td><td id="tableComponents"><input type="number" id="DatoIzq1.3" value="0"></td></tr>
+                <tr><td id="tableComponents">IV. Inversiones en empresas del grupo y asociadas L.P.</td><td id="tableComponents"><input type="number" id="DatoIzq1.4" value="0"></td></tr>
+                <tr><td id="tableComponents">V. Inversiones financieras a largo plazo</td><td id="tableComponents"><input type="number" id="DatoIzq1.5" value="0"></td></tr>
+                <tr><td id="tableComponents">VI. Activos por impuesto diferido</td><td id="tableComponents"><input type="number" id="DatoIzq1.6" value="0"></td></tr>
+                <tr class="spacer-row"><td></td><td></td></tr>
+                <tr class="spacer-row"><td></td><td></td></tr>
+                <tr class="spacer-row"><td></td><td></td></tr>
+                <tr class="spacer-row"><td></td><td></td></tr>
+                <tr class="spacer-row"><td></td><td></td></tr>
+                <tr class="spacer-row"><td></td><td></td></tr>
+                <tr class="spacer-row"><td></td><td></td></tr>
+                <tr><td id="tableTitle">Activo C) ACTIVO CORRIENTE</td><td id="tableTitle"><p id="ActivoC"></p></td></tr>
+                <tr><td id="tableComponents">I. Existencias</td><td id="tableComponents"><p id="DatoIzq2.1"></p></td></tr>
+                <tr><td>Comerciales</td><td><input type="number" id="DatoIzq2.1.1" value="0"></td></tr>
+                <tr><td>Productos en curso</td><td><input type="number" id="DatoIzq2.1.2" value="0"></td></tr>
+                <tr><td id="tableComponents">II. Deudores comerciales y otras cuentas a cobrar</td><td id="tableComponents"><p id="DatoIzq2.2"></p></td></tr>
+                <tr><td>Clientes por ventas y otras prestaciones de servicios</td><td><input type="number" id="DatoIzq2.2.1" value="0"></td></tr>
+                <tr><td>Deudores varios</td><td><input type="number" id="DatoIzq2.2.2" value="0"></td></tr>
+                <tr><td>Otros créditos con las administraciones Públicas</td><td><input type="number" id="DatoIzq2.2.3" value="0"></td></tr>
+                <tr><td id="tableComponents">III. Inversiones en empresas del grupo/asociadas C.P.</td><td id="tableComponents"><input type="number" id="DatoIzq2.3" value="0"></td></tr>
+                <tr><td id="tableComponents">IV. Inversiones financieras a corto plazo</td><td id="tableComponents"><input type="number" id="DatoIzq2.4" value="0"></td></tr>
+                <tr><td id="tableComponents">V. Periodificaciones a corto plazo</td><td id="tableComponents"><input type="number" id="DatoIzq2.5" value="0"></td></tr>
+                <tr><td id="tableComponents">VI. Efectivo y otros activos líquidos equivalentes</td><td id="tableComponents"><input type="number" id="DatoIzq2.6" value="0"></td></tr>
+                <tr><td id="tableTitle">TOTAL ACTIVO (Activo NC + Activo C)</td><td id="tableTitle"><p id="TotalAncAc"></p></td></tr>
+            </table>
 
-            <tr><td id="tableComponents">II. Inmovilizado material</td> <td id="tableComponents"><p id="DatoIzq1.2"></p></td></tr>
-            <tr><td>Terrenos y construcciones</td> <td><input type="number" id="DatoIzq1.2.1" value="0"></td></tr>
-            <tr><td>Instalaciones técnicas y otro inmovilizado material </td> <td><input type="number" id="DatoIzq1.2.2" value="0"></td></tr>
+            <!-- Right Table: Patrimonio Neto y Pasivo -->
+            <table>
+                <tr>
+                    <th id="tableTitle">P Neto) PATRIMONIO NETO</th>
+                    <th id="tableTitle"><p id="PNeto"></p></th>
+                </tr>
+                <tr><td id="tableComponentsAlt">A-1 FONDOS PROPIOS</td><td id="tableComponentsAlt"><p id="A-1"></p></td></tr>
+                <tr><td id="tableComponents">I. Capital</td><td id="tableComponents"><input type="number" id="DatoDer1.1" value="0"></td></tr>
+                <tr><td id="tableComponents">II. Prima de emisión</td><td id="tableComponents"><input type="number" id="DatoDer1.2" value="0"></td></tr>
+                <tr><td id="tableComponents">III. Reservas</td><td id="tableComponents"><p id="DatoDer1.3"></p></td></tr>
+                <tr><td>Legales y estatutarias</td><td><input type="number" id="DatoDer1.3.1" value="0"></td></tr>
+                <tr><td>Otras reservas</td><td><input type="number" id="DatoDer1.3.2" value="0"></td></tr>
+                <tr><td id="tableComponents">IV. Acciones y participaciones en patrimonio propias</td><td id="tableComponents"><input type="number" id="DatoDer1.4" value="0"></td></tr>
+                <tr><td id="tableComponents">V. Resultados de ejercicios anteriores</td><td id="tableComponents"><input type="number" id="DatoDer1.5" value="0"></td></tr>
+                <tr><td id="tableComponents">VI. Otras aportaciones de socios</td><td id="tableComponents"><input type="number" id="DatoDer1.6" value="0"></td></tr>
+                <tr><td id="tableComponents">VII. Resultado del ejercicio</td><td id="tableComponents"><input type="number" id="DatoDer1.7" value="0"></td></tr>
+                <tr><td id="tableComponents">VIII. Dividendo a cuenta</td><td id="tableComponents"><input type="number" id="DatoDer1.8" value="0"></td></tr>
+                <tr><td id="tableComponentsAlt">A-2 SUBVENCIONES, DONACIONES Y LEGADOS</td><td id="tableComponentsAlt"><input type="number" id="A-2" value="0"></td></tr>
+                <tr><td id="tableTitle">Pasivo NC) PASIVO NO CORRIENTE</td><td id="tableTitle"><p id="PasivoNC"></p></td></tr>
+                <tr><td id="tableComponents">I. Provisiones a largo plazo</td><td id="tableComponents"><input type="number" id="DatoDer2.1" value="0"></td></tr>
+                <tr><td id="tableComponents">II. Deudas a largo plazo</td><td id="tableComponents"><input type="number" id="DatoDer2.2" value="0"></td></tr>
+                <tr><td id="tableComponents">III Deudas con empresas del grupo y asociadas a L.P.</td><td id="tableComponents"><input type="number" id="DatoDer2.3" value="0"></td></tr>
+                <tr><td id="tableComponents">IV. Pasivos por impuesto diferido</td><td id="tableComponents"><input type="number" id="DatoDer2.4" value="0"></td></tr>
+                <tr><td id="tableComponents">V. Periodificaciones a largo plazo</td><td id="tableComponents"><input type="number" id="DatoDer2.5" value="0"></td></tr>
+                <tr><td id="tableTitle">Pasivo C) PASIVO CORRIENTE</td><td id="tableTitle"><p id="PasivoC"></p></td></tr>
+                <tr><td id="tableComponents">I. Provisiones a corto plazo</td><td id="tableComponents"><input type="number" id="DatoDer3.1" value="0"></td></tr>
+                <tr><td id="tableComponents">II. Deudas a corto plazo</td><td id="tableComponents"><input type="number" id="DatoDer3.2" value="0"></td></tr>
+                <tr><td id="tableComponents">III. Deudas con empresas del grupo y asociadas a C.P.</td><td id="tableComponents"><input type="number" id="DatoDer3.3" value="0"></td></tr>
+                <tr><td id="tableComponents">IV. Acreedores a corto plazo y otras cuentas a pagar</td><td id="tableComponents"><p id="DatoDer3.4"></p></td></tr>
+                <tr><td>Proveedores a corto plazo</td><td><input type="number" id="DatoDer3.4.1" value="0"></td></tr>
+                <tr><td>Acreedores varios</td><td><input type="number" id="DatoDer3.4.2" value="0"></td></tr>
+                <tr><td>Otras deudas con Administraciones Públicas</td><td><input type="number" id="DatoDer3.4.3" value="0"></td></tr>
+                <tr><td>Personal (remuneraciones pendientes de pago)</td><td><input type="number" id="DatoDer3.4.4" value="0"></td></tr>
+                <tr><td id="tableComponents">V. Periodificaciones a corto plazo</td><td id="tableComponents"><input type="number" id="DatoDer3.5" value="0"></td></tr>
+                <tr><td id="tableTitle">TOTAL P.NETO + PASIVO NC + PASIVO C</td><td id="tableTitle"><p id="TotalPNPNCPC"></p></td></tr>
+            </table>
+        </div>
 
-            <tr><td id="tableComponents">III. Inversiones inmobiliarias</td> <td id="tableComponents"><input type="number" id="DatoIzq1.3" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">IV. Inversiones en empresas del grupo y asociadas L.P.</td> <td id="tableComponents"><input type="number" id="DatoIzq1.4" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">V. Inversiones financieras a largo plazo</td> <td id="tableComponents"><input type="number" id="DatoIzq1.5" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">VI. Activos por impuesto diferido</td> <td id="tableComponents"><input type="number" id="DatoIzq1.6" value="0"></td></tr>
-            
-            
-            <tr><td id="tableTitle">Actvio C) ACTIVO CORRIENTE</td> <td id="tableTitle"><p id="ActivoC"></p></td></tr>
-            
-            <tr><td id="tableComponents">I. Existencias</td> <td id="tableComponents"><p id="DatoIzq2.1"></p></td></tr>
-            <tr><td>Comerciales</td> <td><input type="number" id="DatoIzq2.1.1" value="0"></td></tr>
-            <tr><td>Productos en curso</td> <td><input type="number" id="DatoIzq2.1.2" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">II. Deudores comerciales y otras cuentas a cobrar</td> <td id="tableComponents"><p id="DatoIzq2.2"></p></td></tr>
-            <tr><td>Clientes por ventas y otras prestaciones de servicios</td> <td><input type="number" id="DatoIzq2.2.1" value="0"></td></tr>
-            <tr><td>Deudores varios</td> <td><input type="number" id="DatoIzq2.2.2" value="0"></td></tr>
-            <tr><td>Otros créditos con las administraciones Publicas</td> <td><input type="number" id="DatoIzq2.2.3" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">III. Inversiones en empresas del grupo/asociadas C.P.</td> <td id="tableComponents"><input type="number" id="DatoIzq2.3" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">IV. Inversiones financieras a corto plazo</td> <td id="tableComponents"><input type="number" id="DatoIzq2.4" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">V. Periodificaciones a corto plazo</td> <td id="tableComponents"><input type="number" id="DatoIzq2.5" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">VI. Efectivo y otros activos líquidos equivalentes</td> <td id="tableComponents"><input type="number" id="DatoIzq2.6" value="0"></td></tr>
-            
-            <tr><td id="tableTitle">TOTAL ACTIVO (Activo NC + Activo C)</td> <td id="tableTitle"><p id="TotalAncAc"></p></td></tr>
-        </table>
+        <div class="text-center my-4">
+            <button onclick="porcentajes()" class="btn btn-calculate">Sacar Porcentajes</button>
+        </div>
 
-        <!-- RIGHT TABLE: 29 rows, 2 columns -->
-        <table>
-            <tr>
-                <th id="tableTitle">P Neto) PATRIMONIO NETO</th>
-                <th id="tableTitle"><p id="PNeto"></p></th>
-            </tr>
+        <div class="card">
+            <h2 class="section-title">PORCENTAJES DEL BALANCE</h2>
+
+            <p><strong>ACTIVO NO CORRIENTE:</strong> <span id="porcentajeAnc"></span>%</p>
+            <p><strong>ACTIVO CORRIENTE:</strong> <span id="porcentajeAc"></span>%</p>
+            <p><strong>PATRIMONIO NETO:</strong> <span id="porcentajePneto"></span>%</p>
+            <p><strong>PASIVO NO CORRIENTE:</strong> <span id="porcentajePnc"></span>%</p>
+            <p><strong>PASIVO CORRIENTE:</strong> <span id="porcentajePc"></span>%</p>
+
+
+            <button onclick="updateChart()">ACTUALIZAR</button>
             
-            <tr><td id="tableComponentsAlt">A-1 FONDOS PROPIOS</td> <td id="tableComponentsAlt"><p id="A-1"></p></td></tr>
-            
-            <tr><td id="tableComponents">I. Capital</td> <td id="tableComponents"><input type="number" id="DatoDer1.1" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">II. Prima de emisión</td id="tableComponents"> <td id="tableComponents"><input type="number" id="DatoDer1.2" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">III. Reservas</td> <td id="tableComponents"><p id="DatoDer1.3"></p></td></tr>
-            <tr><td>Legales y estatutarias</td> <td><input type="number" id="DatoDer1.3.1" value="0"></td></tr>
-            <tr><td>Otras reservas</td> <td><input type="number" id="DatoDer1.3.2" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">IV. Acciones y participaciones en patrimonio propias</td> <td id="tableComponents"><input type="number" id="DatoDer1.4" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">V. Resultados de ejercicios anteriores</td> <td id="tableComponents"><input type="number" id="DatoDer1.5" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">VI. Otras aportaciones de socios</td> <td id="tableComponents"><input type="number" id="DatoDer1.6" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">VII. Resultado del ejercicio</td> <td id="tableComponents"><input type="number" id="DatoDer1.7" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">VIII. Dividendo a cuenta</td> <td id="tableComponents"><input type="number" id="DatoDer1.8" value="0"></td></tr>
-            
-            <tr><td id="tableComponentsAlt">A-2 SUBVENCIONES, DONACIONES Y LEGADOS</td> <td id="tableComponentsAlt"><input type="number" id="A-2" value="0"></td></tr>
-            
-            
-            <tr><td id="tableTitle">Pasivo NC) PASIVO NO CORRIENTE</td> <td id="tableTitle"><p id="PasivoNC"></p></td></tr>
-            
-            <tr><td id="tableComponents">I. Provisiones a largo plazo</td> <td id="tableComponents"><input type="number" id="DatoDer2.1" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">II. Deudas a largo plazo</td> <td id="tableComponents"><input type="number" id="DatoDer2.2" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">III Deudas con empresas del grupo y asociadas a L.P.</td> <td id="tableComponents"><input type="number" id="DatoDer2.3" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">IV. Pasivos por impuesto diferido</td> <td id="tableComponents"><input type="number" id="DatoDer2.4" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">V. Periodificaciones a largo plazo</td> <td id="tableComponents"><input type="number" id="DatoDer2.5" value="0"></td></tr>
-            
-            
-            <tr><td id="tableTitle">Pasivo C) PASIVO CORRIENTE</td> <td id="tableTitle"><p id="PasivoC"></p></td></tr>
-            
-            <tr><td id="tableComponents">I. Provisiones a corto plazo</td> <td id="tableComponents"><input type="number" id="DatoDer3.1" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">II. Deudas a corto plazo</td> <td id="tableComponents"><input type="number" id="DatoDer3.2" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">III. Deudas con empresas del grupo y asociadas a C.P.</td> <td id="tableComponents"><input type="number" id="DatoDer3.3" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">IV. Acreedores a corto plazo y otras cuentas a pagar</td> <td id="tableComponents"><p id="DatoDer3.4"></p></td></tr>
-            <tr><td>Proveedores a corto plazo</td> <td><input type="number" id="DatoDer3.4.1" value="0"></td></tr>
-            <tr><td>Acreedores varios</td> <td><input type="number" id="DatoDer3.4.2" value="0"></td></tr>
-            <tr><td>Otras deudas con Administraciones Públicas</td> <td><input type="number" id="DatoDer3.4.3" value="0"></td></tr>
-            <tr><td>Personal (remuneraciones pendientes de pago)</td> <td><input type="number" id="DatoDer3.4.4" value="0"></td></tr>
-            
-            <tr><td id="tableComponents">V. Periodificaciones a corto plazo</td> <td id="tableComponents"><input type="number" id="DatoDer3.5" value="0"></td></tr>
-            <tr><td id="tableTitle">TOTAL P.NETO + PASIVO NC + PASIVO C</td> <td id="tableTitle"><p id="TotalPNPNCPC"></p></td></tr>
-        </table>
+            <div id="chart"></div>
+
+            <script>
+              function updateChart() {
+                const v1 = parseFloat(document.getElementById("porcentajePneto").value) || 0;
+                const v2 = parseFloat(document.getElementById("porcentajePnc").value) || 0;
+                const v3 = parseFloat(document.getElementById("porcentajePc").value) || 0;
+                const total = v1 + v2 + v3;
+
+                if (total === 0) {
+                  alert("No es posible crear el gráfico con estos daots");
+                  return;
+                }
+
+                const d1 = (v1 / total) * 360;
+                const d2 = (v2 / total) * 360;
+                const d3 = 360 - d1 - d2;
+
+                document.getElementById("chart").style.background = `
+                  conic-gradient(
+                    red 0deg, red ${d1}deg,
+                    green ${d1}deg, green ${d1 + d2}deg,
+                    blue ${d1 + d2}deg, blue 360deg
+                  )
+                `;
+              }
+
+              updateChart();
+            </script>
+
+
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">PORCENTAJE FINANCIADO EXTERNAMENTE</h2>
+            <p id="pFinanc"></p>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">FONDO DE MANIOBRA</h2>
+            <p id="FondoManiobra"></p>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">RATIOS DE LA EMPRESA</h2>
+            <p><strong>Endeudamiento:</strong> <span id="endeudamiento"></span></p>
+            <p><strong>Solvencia:</strong> <span id="solvencia"></span></p>
+            <p><strong>Liquidez:</strong> <span id="liquidez"></span></p>
+            <p><strong>Tesorería:</strong> <span id="tesoreria"></span></p>
+        </div>
     </div>
 
-    <br>
-    <button onclick="porcentajes()" value="SacarPorcentajes">Sacar Porcentajes</button>
-    <br>
-
-    <div>
-      <p>PORCENTAJES DEL BALANCE</p><br><br>
-
-      <p>ACTIVO NO CORRIENTE<div id="porcentajeAnc"></div></p>
-      <p>ACTIVO CORRIENTE<div id="porcentajeAc"></div></p><br><br>
-
-      <p>PATRIMONIO NETO<div id="porcentajePneto"></div></p>
-      <p>PASIVO NO CORRIENTE<div id="porcentajePnc"></div></p>
-      <p>PASIVO CORRIENTE<div id="porcentajePc"></div></p>
-    </div>
-
-    <br><br>
-
-    <div>
-      <p>PORCENTAJE FINANCIADO EXTERNAMENTE</p><br>
-
-      <p id="pFinanc"></p>
-    </div>
-
-    <br><br>
-    
-    <div>
-      <p>FONDO DE MANIOBRA</p><br>
-
-      <p id="FondoManiobra"></p>
-    </div>
-
-    <br><br>
-
-    <div>
-
-      <p>RATIOS DE LA EMRPESA</p><br>
-
-      <p id="endeudamiento">Endeudamiento</p>
-      <p id="solvencia">Solvencia</p>
-      <p id="liquidez">Liquidez</p>
-      <p id="tesoreria">Tesoreria</p>
-
-    </div>
+    <footer class="text-center text-white" style="background: linear-gradient(90deg, #343a40, #495057);">
+        <div class="container pt-5">
+            <section class="mb-5">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-2"><a href="main.html" class="text-white">Home</a></div>
+                    <div class="col-md-2"><a href="sobreNosotros.html" class="text-white">Sobre Nosotros</a></div>
+                    <div class="col-md-2"><a href="planesPago.html" class="text-white">Planes de pago</a></div>
+                    <div class="col-md-2"><a href="FAQs.html" class="text-white">FAQs</a></div>
+                    <div class="col-md-2"><a href="contactanos.html" class="text-white">Contáctanos</a></div>
+                </div>
+            </section>
+            <hr class="my-5" />
+            <section class="mb-5">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <p>
+                            Simplifique la gestión de su balance financiero con nuestra herramienta integrada. 
+                            Obtenga análisis precisos y en tiempo real para tomar decisiones informadas.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="social-icons mb-5">
+                <a href="#" class="text-white me-4"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-4"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-4"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white me-4"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-white me-4"><i class="fab fa-github"></i></a>
+            </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2025 Balance Calculator. Todos los derechos reservados.
+        </div>
+    </footer>
 
     <script src="sheetCalculations.js"></script>
-
-    </body>
-
-    <footer class="text-center text-white" style="background-color: #3f51b5">
-        <!-- Grid container -->
-        <div class="container">
-          <!-- Section: Links -->
-          <section class="mt-5">
-            <!-- Grid row-->
-            <div class="row text-center d-flex justify-content-center pt-5">
-              <!-- Grid column -->
-              <div class="col-md-2">
-                <h6 class="text-uppercase font-weight-bold">
-                  <a href="#!" class="text-white">Home</a>
-                </h6>
-              </div>
-              <!-- Grid column -->
-    
-              <!-- Grid column -->
-              <div class="col-md-2">
-                <h6 class="text-uppercase font-weight-bold">
-                  <a href="#!" class="text-white">Sobre Nosotros</a>
-                </h6>
-              </div>
-              <!-- Grid column -->
-    
-              <!-- Grid column -->
-              <div class="col-md-2">
-                <h6 class="text-uppercase font-weight-bold">
-                  <a href="#!" class="text-white">Planes de pago</a>
-                </h6>
-              </div>
-              <!-- Grid column -->
-    
-              <!-- Grid column -->
-              <div class="col-md-2">
-                <h6 class="text-uppercase font-weight-bold">
-                  <a href="#!" class="text-white">FaQs  </a>
-                </h6>
-              </div>
-              <!-- Grid column -->
-    
-              <!-- Grid column -->
-              <div class="col-md-2">
-                <h6 class="text-uppercase font-weight-bold">
-                  <a href="#!" class="text-white">Contactanos</a>
-                </h6>
-              </div>
-              <!-- Grid column -->
-            </div>
-            <!-- Grid row-->
-          </section>
-          <!-- Section: Links -->
-    
-          <hr class="my-5" />
-    
-          <!-- Section: Text -->
-          <section class="mb-5">
-            <div class="row d-flex justify-content-center">
-              <div class="col-lg-8">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                  distinctio earum repellat quaerat voluptatibus placeat nam,
-                  commodi optio pariatur est quia magnam eum harum corrupti
-                  dicta, aliquam sequi voluptate quas.
-                </p>
-              </div>
-            </div>
-          </section>
-          <!-- Section: Text -->
-    
-          <!-- Section: Social -->
-          <section class="text-center mb-5">
-            <a href="" class="text-white me-4">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="" class="text-white me-4">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="" class="text-white me-4">
-              <i class="fab fa-google"></i>
-            </a>
-            <a href="" class="text-white me-4">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="" class="text-white me-4">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="" class="text-white me-4">
-              <i class="fab fa-github"></i>
-            </a>
-          </section>
-          <!-- Section: Social -->
-        </div>
-        <!-- Grid container -->
-    
-        <!-- Copyright -->
-        <div
-             class="text-center p-3"
-             style="background-color: rgba(0, 0, 0, 0.2)"
-             >
-          © 2020 Copyright:
-          <a class="text-white" href="https://mdbootstrap.com/"
-             >MDBootstrap.com</a
-            >
-        </div>
-        <!-- Copyright -->
-      </footer>
 
 </html>

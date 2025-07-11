@@ -1,0 +1,116 @@
+<html>
+
+    <head>
+
+        <title>Calculadora de Balances Integrada a la Empresa</title>
+        <link rel="stylesheet" href="FAQs.css">
+        <meta charset="UTF-8">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <script>
+
+            function login(){
+                window.location.href = "login.html"
+            }
+            function signup(){
+                window.location.href = "signup.html"
+            }
+
+            
+        </script>
+        
+    </head>
+
+    <body>
+
+        <!--  HEADER PRINCIPAL  -->
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <a href="main.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="main.html" class="nav-link px-2 link-dark">Home</a></li>
+                <li><a href="caracteristicas.html" class="nav-link px-2 link-dark">Características</a></li>
+                <li><a href="planesPago.html" class="nav-link px-2 link-dark">Planes de pago</a></li>
+                <li><a href="FAQs.html" class="nav-link px-2 link-secondary">FAQs</a></li>
+                <li><a href="sobreNosotros.html" class="nav-link px-2 link-dark">Sobre nosotros</a></li>
+            </ul>
+            <div class="col-md-3 text-end">
+                <button type="button" id="login" class="btn btn-outline-primary me-2" onclick="login()">Inicia Sesión</button>
+                <button type="button" id="iniciar" class="btn btn-primary me-2" onclick="signup()">Regístrate</button>
+            </div>
+        </header>
+
+        <div class="container">
+        <h1 class="faq-header">"Frequently Asked Questions" sobre la herramienta</h1>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        ¿Qué es un balance?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Para los que estén poco familiarizados con el concepto, un balance consiste en un informe contable para conocer la informmación financiera de la empresa.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        ¿De veras es importanete un balance?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        A pesar de mantenerse en un plano contable, un balance es una herramienta indispensable para conocer la situación de la empresa y decidir los próximos movimientos a partir de los resultados obtenidos.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        ¿Que ofrece distinto CBI?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        A diferencia de otras ofertas disponibles, CBI ofrece un servicio mas personal, íntimo, y ademas la capacidad de comparación con el resto del mercado.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        ¿Puedo acceder a mis historiales desde el teléfono?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Si, nuestra plataforma está habilitaada para su uso en teléfono y todos us datos se comparten entre dispositivos a través de una misma cuenta.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        ¿Alguna otra pregunta?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Ponte en contacto con nuestro servicio técnico para consultar tus dudas en el +34 91 123 45 67
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>

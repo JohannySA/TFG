@@ -159,27 +159,28 @@ function porcentajes(){
     //Anc
 
     let porcentajeAnc =((calcularAnc() * 100) / totalAncAc()).toFixed(2);
-    document.getElementById('porcentajeAnc').innerText = porcentajeAnc+"%";
+    document.getElementById('porcentajeAnc').innerText = porcentajeAnc;
 
     //Ac
 
     let porcentajeAc =((calcularAc() * 100) / totalAncAc()).toFixed(2);
-    document.getElementById('porcentajeAc').innerText = porcentajeAc+"%";
+    document.getElementById('porcentajeAc').innerText = porcentajeAc;
 
     //Pneto
 
     let porcentajePneto =((calcularPNeto() * 100) / totalPNetoPcPnc()).toFixed(2);
-    document.getElementById('porcentajePneto').innerText = porcentajePneto+"%";
+    document.getElementById('porcentajePneto').innerText = porcentajePneto;
+
 
     //Pnc
 
     let porcentajePnc =((calcularPasivoNC() * 100) / totalPNetoPcPnc()).toFixed(2);
-    document.getElementById('porcentajePnc').innerText = porcentajePnc+"%";
+    document.getElementById('porcentajePnc').innerText = porcentajePnc;
 
     //Pc
 
     let porcentajePc =((calcularPasivoC() * 100) / totalPNetoPcPnc()).toFixed(2);
-    document.getElementById('porcentajePc').innerText = porcentajePc+"%";
+    document.getElementById('porcentajePc').innerText = porcentajePc;
 
     }
 
